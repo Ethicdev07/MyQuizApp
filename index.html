@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            -webkit-user-select: none;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        label {
+            cursor: pointer;
+        }
+
+        input {
+            cursor: pointer;
+        }
+
+        .background {
+            padding: 15px;
+            min-height: 600px;
+            width: 350px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 200px 100px #00000042;
+            animation-name: enlarge;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            background-color: rgba(76, 9, 177, 0.048);
+            background-image: url(./background.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        @keyframes enlarge {
+            0% {
+                transform: scale(.1);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+
+            70% {
+                transform: scale(.9);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .startpage {
+            min-height: 550px;
+            border-radius: 15px;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .startpage h1,
+        .selectsubjuct h1 {
+            font-size: 3em;
+            padding: 0;
+            margin-top: -10px;
+            color: rgb(83, 84, 159);
+        }
+
+        .startpage .description {
+            font-size: .9em;
+            margin-top: -20px;
+            color: rgb(83, 84, 159);
+        }
+
+        .instruction {
+            font-size: .9em;
+            margin: auto;
+            width: 90px;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+            outline: none;
+            overflow: hidden;
+            border-bottom: 2px solid black;
+            padding-bottom: 2px;
+        }
+
+        ul {
+            text-align: left;
+            color: rgb(106, 14, 178);
+        }
+
+        ul li {
+            margin-top: 15px;
+        }
+
+        img {
+            width: 50px;
+            margin: auto;
+            display: block;
+        }
+
+        button {
+            font-size: .9em;
+            margin: auto;
+            width: 90px;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+            outline: none;
+            overflow: hidden;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-family: 'Lemon', serif;
+            word-spacing: 10px;
+            color: white;
+            background-color: rgb(75, 9, 177);
+            width: 200px;
+            border: none;
+        }
+
+        button:hover .arc {
+            animation-name: bend;
+            animation-duration: .3s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes bend {
+            to {
+                transform: rotate(-90deg);
+            }
+        }
+
+        .arc {
+            font-size: 1.2em;
+        }
+
+        .questionpage {
+            min-height: 550px;
+            border-radius: 15px;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .que {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .quest {
+            margin-top: 50px;
+            font-size: 1.3em;
+            border: 2px solid rgb(83, 84, 159);
+            padding: 5px;
+            min-height: 120px;
+            border-radius: 10px;
+        }
+
+        .options {
+            list-style-type: none;
+            margin-top: 30px;
+            margin-left: -20px;
+        }
+
+        .options li {
+            margin-top: 20px;
+        }
+
+        .b2f {
+            display: inline;
+            width: 120px;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+
+        .sub {
+            background-color: rgb(61, 70, 63);
+            margin-top: 20px;
+        }
+
+        #timer {
+            font-size: .4em;
+            color: rgb(83, 84, 159);
+        }
+
+        .carry {
+            animation-name: tran;
+            animation-duration: 1.5s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
+        }
+
+        @keyframes tran {
+            50% {
+                transform: scale(0);
+            }
+
+            80% {
+                transform: scale(1);
+            }
+        }
+
+        .finishpage {
+            min-height: 550px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 20px;
+            font-family: arial;
+        }
+
+        .finishpage button {
+            display: inline;
+            width: 80px;
+            margin-left: 10px;
+        }
+
+        .designbase {
+            width: 101%;
+            border: 1px solid rgb(83, 84, 159);
+            margin: auto;
+            margin-top: 20px;
+            animation-name: boun;
+            animation-timing-function: linear;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes boun {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .follow {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 2em;
+        }
+
+        .follow a {
+            color: rgb(104, 100, 100);
+            margin-top: 5px;
+        }
+
+        #submitpages {
+            min-height: 550px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 20px;
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: .9em;
+            font-weight: 600;
+            color: rgb(75, 9, 177);
+            padding-top: 30px;
+        }
+
+        .scoreboard {
+            border: thin solid rgb(106, 14, 178);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: auto;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            color: black;
+        }
+
+        .ico1 {
+            height: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            font-size: 2em;
+        }
+
+        .ico2 {
+            height: 50px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            font-size: 2em;
+        }
+
+        .ico1 a,
+        .ico2 a {
+            display: block;
+            margin: auto;
+            color: black;
+        }
+
+        .selectsubjuct {
+            min-height: 550px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 20px;
+            font-family: arial;
+        }
+
+        .all {
+            min-height: 350px;
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 10px;
+        }
+
+        .all div {
+            width: 100%;
+            height: 80px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-family: 'Lemon', serif;
+            word-spacing: 10px;
+            color: white;
+            background-color: rgb(58, 7, 133);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin: auto;
+        }
+
+        .all div:hover {
+            background-color: black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="selectsubjuct" id="selectsubject">
+            <img src="./favicon.ico" alt="logo" style="margin-bottom: 4px;">
+            <h1>Ethic-Trivia</h1>
+            <p>Welcome to this quiz app! Prepare to test your knowledge.</p>
+            <div class="all">
+                <div onclick="subject('Math')">Math</div>
+                <div onclick="subject('English')">English</div>
+                <div onclick="subject('Chemistry')">Chemistry</div>
+                <div onclick="subject('Physics')">Physics</div>
+                <div onclick="subject('Biology')">Biology</div>
+                <div onclick="subject('History')">History</div>
+                <div onclick="subject('Literature')">Literature</div>
+                <div onclick="subject('Philosophy')">Philosophy</div>
+            </div>
+            <a href="">developed by EthicDev</a>
+        </div>
+        <div class="startpage" id="startpage" hidden>
+            <img src="./favicon.ico" alt="logo">
+            <h1>Ethic-Trivia</h1>
+            <p class="description">Welcome to the quiz app! Prepare to test your knowledge.</p>
+            <p class="instruction">Instruction</p>
+            <ul>
+                <li>You have 10 minute for all questions</li>
+                <li>Read each question carefully before selecting an answer. </li>
+                <li>Use the "Next" button to proceed to the next question.</li>
+                <li>Feel free to skip questions and come back to them later.</li>
+                <li>Once the timer runs out, your answer will be automatically submitted.</li>
+            </ul>
+            <button onclick="startQuiz()">START <i class="fa-duotone fa-arrow-right-from-arc arc"></i></button>
+            <div class="follow"><a href=""><i class="fa-brands fa-square-instagram"></i></a><a href=""><i
+                        class="fa-brands fa-facebook"></i></a><a href="https://wa.me/2348117436007"><i
+                        class="fa-brands fa-square-whatsapp"></i></a><a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="questionpage" id="questionpage" hidden>
+            <h1 class="que">Question <span id="number"></span>
+                <div style="display: flex; align-items: center; justify-content: center;" class="carry"> <span
+                        style="position: absolute;" id="timer"></span><i class="fa-duotone fa-spinner-third fa-spin"
+                        style="font-size: 2em; animation-duration: 10s;"></i></div>
+            </h1>
+            <p class="quest" id="quest"></p>
+            <ul class="options" id="opt">
+            </ul>
+            <button class="b2f" onclick="control('previous')">PREVIOUS</button><button class="b2f"
+                onclick="control('next')" id="nex">
+                NEXT</button>
+            <button class="sub" onclick="submit()">SUBMIT</button>
+            <div class="designbase"></div>
+        </div>
+        <div class="finishpage" id="promptPage" hidden>
+            <h1 style="font-family: Arial; font-size: 1.2em; padding-top: 200px;">Are you sure you want to submit</h1>
+            <button onclick="continueToSubmit('yes')">Yes</button><button
+                onclick="continueToSubmit('no')">Cancel</button>
+            <p>you have skipped <span id="missed"></span> questions in the quiz. To ensure accurate results and a
+                comprehensive assessment, please review your responses or continue to submit.</p>
+            <div id="unDoneQuestions"></div>
+        </div>
+        <div id="submitpages" hidden>
+            <h1 id="yourScore" style="margin-top: 20px;">"You did it! Quiz submitted – now, await your score."</h1>
+            <div class="scoreboard">
+                <p id="displayscore"></p>
+            </div>
+            <p style="color: black; font-family: 'Libre Franklin', sans-serif; line-height: 25px;">Congratulations on
+                submitting your quiz! Remember, every completed challenge is a step closer to the summit of knowledge.
+                Now, stand tall, for you've not only answered questions but also embraced the journey of continuous
+                learning. Well done!</p>
+            <div class="ico1">
+                <a href="https://www.github.com/Ethicdev07"><i class="fa-brands fa-github"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://wa.me/2348117436007"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <div class="ico2">
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <button class="proceed" style="background-color: #53549F; width: 100px; margin-top: 5px;"
+                onclick="proceed()">Proceed</button>
+        </div>
+    </div>
+</body>
+
+<script src="./main.js"></script>
+
+</html>
